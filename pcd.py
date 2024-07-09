@@ -14,12 +14,12 @@ from sqlalchemy import Column, String, create_engine, Float, Date, Time, select
 import http.client, urllib
 
 DATABASE_URL = "mysql://root:rootpassword@192.168.110.249:3306/pollutions"
-DATABASE_URL_2 = "mysql://root:rootpassword@192.168.100.79:3306/pollutions"
+# DATABASE_URL_2 = "mysql://root:rootpassword@192.168.100.79:3306/pollutions"
 engine = create_engine(DATABASE_URL)
-envocc_engine = create_engine(DATABASE_URL_2)
+# envocc_engine = create_engine(DATABASE_URL_2)
 Base = declarative_base()
 localSession = Session(bind=engine, autocommit=False, autoflush=False)
-envoccSession = Session(bind=envocc_engine, autocommit=False, autoflush=False)
+# envoccSession = Session(bind=envocc_engine, autocommit=False, autoflush=False)
 
 
 class Pollution(Base):
